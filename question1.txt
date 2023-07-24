@@ -1,0 +1,72 @@
+package exam.loggerproblem;
+
+public interface ILogger {
+void info(String msg);
+void error(String msg);
+}
+
+
+Last read
+package exam.loggerproblem; public class ... by Ashutosh Ojha
+Ashutosh Ojha
+5:17 PM
+
+package exam.loggerproblem;
+
+public class LoggerImpl implements ILogger {
+ILogger log= new LoggerWithDateTime();
+@Override
+public void info(String msg) {
+log.info("");
+System.out.print("Info-"+msg+"\n");
+}
+
+@Override
+public void error(String msg) {
+log.error("");
+System.err.println("Error-"+msg+"\n");
+}
+}
+
+
+package exam.loggerproblem; public class ... by Ashutosh Ojha
+Ashutosh Ojha
+5:18 PM
+
+package exam.loggerproblem;
+
+
+public class LoggerUsage {
+public static void main(String[] args) {
+ILogger logger=new LoggerImpl();
+logger.info("successful");
+logger.error("something went wrong");
+}
+}
+
+
+package exam.loggerproblem; import java.t... by Ashutosh Ojha
+Ashutosh Ojha
+5:18 PM
+
+package exam.loggerproblem;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class LoggerWithDateTime implements ILogger{
+LocalDate localDate= LocalDate.now();
+LocalTime localTime= LocalTime.now();
+@Override
+public void info(String msg) {
+System.out.println(localDate + " " + localTime);
+}
+
+@Override
+public void error(String msg) {
+System.out.println(localDate + " " + localTime);
+}
+}
+
+
+has context menu
