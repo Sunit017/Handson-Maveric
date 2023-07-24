@@ -1,0 +1,44 @@
+new class:
+
+package exam.loggerproblem;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class LoggerWithDateTime implements ILogger{
+    LocalDate localDate= LocalDate.now();
+    LocalTime localTime= LocalTime.now();
+    @Override
+    public void info(String msg) {
+        System.out.println(localDate + " " + localTime);
+    }
+
+    @Override
+    public void error(String msg) {
+        System.out.println(localDate + " " + localTime);
+    }
+}
+-----------------------------------------------------------
+
+
+changes made to existing classes:
+
+1)
+
+package exam.loggerproblem;
+
+public class LoggerImpl implements ILogger {
+    ILogger log= new LoggerWithDateTime();
+    @Override
+    public void info(String msg) {
+        log.info("");
+        System.out.print("Info-"+msg+"\n");
+    }
+
+    @Override
+    public void error(String msg) {
+        log.error("");
+        System.err.println("Error-"+msg+"\n");
+    }
+}
+-------------------------------------------------------
