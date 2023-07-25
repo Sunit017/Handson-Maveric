@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Age Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="user-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required><br>
+
+        <button onclick="calculateAge()">Calculate Age</button>
+    </div>
+
+    <div class="user-age">
+        <h2>Age:</h2>
+        <p id="ageResult"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

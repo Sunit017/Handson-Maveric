@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.user-form {
+    text-align: center;
+}
+
+.user-form label,
+.user-form input {
+    display: block;
+    margin: 10px;
+}
+
+.user-age {
+    margin-top: 20px;
+    text-align: center;
+}
