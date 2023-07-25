@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Product Selection</title>
+
+    <style>
+
+        /* Add some basic styling to the page */
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+        }
+
+
+
+
+        h1 {
+
+            margin-bottom: 20px;
+
+        }
+
+
+
+
+        label {
+
+            display: block;
+
+            margin-bottom: 5px;
+
+        }
+
+
+
+
+        select, input[type="number"] {
+
+            margin-bottom: 10px;
+
+        }
+
+
+
+
+        #totalAmount {
+
+            margin-top: 20px;
+
+            font-weight: bold;
+
+        }
+
+
+
+
+        #discountedAmount {
+
+            margin-top: 10px;
+
+            font-weight: bold;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Product Selection</h1>
+
+    <label for="product">Select a product:</label>
+
+    <select id="product">
+
+        <option value="0">Select Product</option>
+
+        <option value="50">Product A - 50</option>
+
+        <option value="75">Product B - 75</option>
+
+        <option value="100">Product C - 100</option>
+
+    </select><br>
+
+
+
+
+    <label for="quantity">Select quantity:</label>
+
+    <input type="number" id="quantity" min="1" value="1"><br>
+
+
+
+
+    <button onclick="calculateTotal()">Calculate Total</button>
+
+
+
+
+    <div id="totalAmount"></div>
+
+    <div id="discountedAmount"></div>
+
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
