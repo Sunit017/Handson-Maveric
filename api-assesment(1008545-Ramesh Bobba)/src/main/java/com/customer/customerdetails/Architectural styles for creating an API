@@ -1,0 +1,7 @@
+The following are the some of architectural styles for creating Api's
+1.(REST)-Representational State Transfer
+2.SOAP (Simple Object Access Protocol)
+3.HATEOAS - Hypermedia as the Engine of Application State(REST-ful Hypermedia APIs)
+4.GraphQL
+5.Remote Procedure Call (RPC):
+
