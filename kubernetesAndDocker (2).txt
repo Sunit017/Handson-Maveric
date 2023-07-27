@@ -1,0 +1,17 @@
+docker login -u [username];
+minikube status
+1)minikube start
+2)kubectl get all
+2)kubectl get namespaces
+3)kubectl create namespace S3namespace(create namespace)
+4)docker pull [image name]
+5)kubectl run hello --image=nginx (creating a pod without namespace)
+5)kubectl run bye --image=nginx --namespace=s3namespace( creating a pod with namespace)
+6)kubectl get pods(All pods without namespace)
+7)kubectl get pods --namespace=s3namespace(With namespace)
+8)kubectl describe pod pod1 --namespace=s3namespace(details of the pod)
+9)docker tag nginx:latest subhrajitbarik/dockerpractice:nginx(tag the image name)
+10)docker push subhrajitbarik/dockerpractice:nginx(pushing the image to dockerhub)
+11)kubectl apply -f https://k8s.io/examples/controllers/nginx-deployment.yaml(will do deployment with 3 replicas)
+12)kubectl set image deployment/nginx-deployment nginx=nginx:1.16.1
+
